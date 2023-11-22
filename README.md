@@ -58,7 +58,7 @@ GPIO19, GPIO20 - these are both used for the USB connection.
 
 ## PSRAM
 
-For modules that include PSRAM you **MUST NOT** use GPIO35, GPIO36 or GPIO37.
+For modules that include Octal PSRAM (any module that has 8MB PSRAM) you **MUST NOT** use GPIO35, GPIO36 or GPIO37.
 
 ## JTAG Pins
 
