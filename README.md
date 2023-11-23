@@ -1,3 +1,11 @@
+# Is this useful?
+
+Feel free to open an issue or PR if you have any suggestions. And if you found it helpful then you might like to visit one of these links:
+
+- atomic14 YouTube Channel: https://youtube.com/atomic14
+- the newsletter: https://atomic14.substack.com
+- Patreon: https://www.patreon.com/atomic14
+  
 # ESP32-S3 Pinouts
 
 I've always used this [Random Nerds page](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) as a reference for which ESP32 pins are safe to use.
@@ -139,10 +147,3 @@ See Table-2-2 [here](https://www.espressif.com/sites/default/files/documentation
 | <span style="color: orange;">GPIO46</span>   | 16         | I/O/T| **GPIO46** |
 | GPIO47   | 24         | I/O/T| SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF |
 | GPIO48   | 25         | I/O/T| SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF |
-
-# Is this useful?
-
-Feel free to open an issue or PR if you have any suggestions. And if you found it helpful then you might like to visit one of these links:
-
-- atomic14 YouTube Channel: https://youtube.com/atomic14
-- Patreon: https://www.patreon.com/atomic14
