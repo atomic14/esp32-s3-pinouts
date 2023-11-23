@@ -58,6 +58,10 @@ GPIO3 | Floating | –
 GPIO45 | Pull-down | 0
 GPIO46 | Pull-down | 0
 
+# I2S, I2C, SPI, UART, Remote Control etc...
+
+These can use any GPIO pins on the ESP32-S3.
+
 # <span style="color: red;">Pins That You Need to be Careful With</span>
 
 ## USB Data Pins
