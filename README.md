@@ -91,15 +91,15 @@ These default to UART0 until they are used by your code.
 The following pins have glitches during power up.
 
 GPIO1, GPIO2,GPIO3,GPIO4, GPIO5, GPIO6, GPIO7, GPIO8, GPIO9, GPIO10, GPIO11, GPIO12, GPIO13, GPIO14, GPIO15, GPIO16, GPIO17:
-Low-level glitch: the pin is at a low level output status for 60us.
+- Low-level glitch: the pin is at a low level output status for 60us.
 
 GPIO18:
-Low-level glitch: the pin is at a low level output status for 60us.
-High-level glitch: the pin is at a low level output status for 60us.
+- Low-level glitch: the pin is at a low level output status for 60us.
+- High-level glitch: the pin is at a high level output status for 60us.
 
 GPIO19, GPIO20:
-Low-level glitch: the pin is at a low level output status for 60us.
-Two High-level glitches: the pin is at a low level output status for 60us.
+- Low-level glitch: the pin is at a low level output status for 60us.
+- Two High-level glitches: the pin is at a high level output status for 60us.
 
 See Table-2-2 [here](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 
