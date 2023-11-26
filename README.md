@@ -3,7 +3,7 @@
 Feel free to open an issue or PR if you have any suggestions. And if you found it helpful then you might like to visit one of these links:
 
 - atomic14 YouTube Channel: https://youtube.com/atomic14
-- the newsletter: https://atomic14.substack.com
+- the atomic14 newsletter: https://atomic14.substack.com
 - Patreon: https://www.patreon.com/atomic14
   
 # ESP32-S3 Pinouts
