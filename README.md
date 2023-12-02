@@ -41,7 +41,7 @@ e.g. it's safe to have a button connected to GPIO0 and use that button in your c
 
 If you want to use them as outputs, then be aware of the default pull up or pull down resistors.
 
-### Boot Mode Control
+## Boot Mode Control
 
 | Boot Mode | GPIO0 | GPIO46 |
 |-----------|-------|--------|
@@ -64,15 +64,15 @@ These can use any GPIO pins on the ESP32-S3.
 
 # <span style="color: red;">Pins That You Need to be Careful With</span>
 
-## USB Data Pins
+# USB Data Pins
 
 GPIO19, GPIO20 - these are both used for the USB connection.
 
-## PSRAM
+# PSRAM
 
 For modules that include Octal PSRAM (any module that has 8MB PSRAM) you **MUST NOT** use GPIO35, GPIO36 or GPIO37.
 
-## JTAG Pins
+# JTAG Pins
 
 GPIO39, GPIO40, GPIO41, GPIO42
 
@@ -80,11 +80,33 @@ The default behaviour of these pins is JTAG debugging, during firmware download 
 
 This can be turned off by burning some eFuses in conjunction with GPIO3 (see the datasheet for details).
 
-## UART Pins
+# UART Pins
 
 GPIO43, GPIO44
 
 These default to UART0 until they are used by your code.
+
+# ADC Pins
+
+The ADC channels are all on fixed pins, and if you are using WiFi you cannot use ADC Unit 2
+
+The pins for ADC Unit 1 are:
+
+| GPIO Number | ADC Channel |
+|-------------|-------------|
+| GPIO1    | ADC1_CH0 |
+| GPIO2    | ADC1_CH1 |
+| GPIO3    | ADC1_CH2 |
+| GPIO4    | ADC1_CH3 |
+| GPIO5    | ADC1_CH4 |
+| GPIO6    | ADC1_CH5 |
+| GPIO7    | ADC1_CH6 |
+| GPIO8    | ADC1_CH7 |
+| GPIO9    | ADC1_CH8 |
+
+# DAC Pins
+
+There is NO DAC on the ESP32-S3 - you can simulate analog output using PWM or I2S PDM.
 
 # Power Up Glitches
 
