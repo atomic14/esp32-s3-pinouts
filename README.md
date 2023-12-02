@@ -5,7 +5,7 @@ Feel free to open an issue or PR if you have any suggestions. And if you found i
 - atomic14 YouTube Channel: https://youtube.com/atomic14
 - the atomic14 newsletter: https://atomic14.substack.com
 - Patreon: https://www.patreon.com/atomic14
-  
+
 # ESP32-S3 Pinouts
 
 I've always used this [Random Nerds page](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) as a reference for which ESP32 pins are safe to use.
@@ -102,6 +102,18 @@ GPIO19, GPIO20:
 - Two High-level glitches: the pin is at a high level output status for 60us.
 
 See Table-2-2 [here](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
+
+# Video Version
+
+For people who prefer video content - you can wartch a video version [here](https://youtu.be/tC-DLeI6hjQ):
+
+[![ESP32-S3 Pinouts](https://img.youtube.com/vi/tC-DLeI6hjQ/0.jpg)](https://www.youtube.com/watch?v=tC-DLeI6hjQ)
+
+# ESP32-S3 Schematics
+
+If you want to learn more about what's needed to run an ESP32-S3, then there's a great playlist here - it takes you from a ridiculously minimal circuit to a fully functional board with a display and audio.
+
+[![Tiny ESP32-S3 Board](https://img.youtube.com/vi/zeSlRvCd6tg/0.jpg)](https://www.youtube.com/playlist?list=PL5vDt5AALlRe7A07bVV5UP6ttTWAGH4Yi)
 
 # Full GPIO Table
 
