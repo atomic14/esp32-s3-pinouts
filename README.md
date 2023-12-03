@@ -161,6 +161,31 @@ gpio_config(&io_conf);
 This Syntax can be found e.g. here: [gpio_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/peripherals/gpio/generic_gpio/main/gpio_example_main.c#L93)
 
 
+# Further Considerations about Power Up Glitches
+
+there are cases where the Pin is by Default connected to a +3.3V or a +1.8V Power Domain. 
+Examples are GPIO20 (D+) or GPIO48. 
+
+you can switch them off in a very early stage in Bootloader: 
+
+(see here)[https://github.com/espressif/esp-idf/tree/master/examples/custom_bootloader/bootloader_hooks]
+
+with e.g. the Following Code: 
+```C
+void bootloader_before_init(void) {
+    /* Keep in my mind that a lot of functions cannot be called from here
+     * as system initialization has not been performed yet, including
+     * BSS, SPI flash, or memory protection. */
+    ESP_LOGI("HOOK", "This hook is called BEFORE bootloader initialization");
+    gpio_hal_iomux_func_sel(GPIO_PIN_MUX_REG[GPIO_NUM_20], PIN_FUNC_GPIO);
+    esp_rom_gpio_pad_select_gpio(GPIO_NUM_48);
+    gpio_ll_output_enable (&GPIO, GPIO_NUM_48);
+    gpio_ll_set_level (&GPIO, GPIO_NUM_48, 0);
+}
+```
+
+
+
 # Source Material
 
 - [ESP32-S3-WROOM Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
