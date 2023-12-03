@@ -135,7 +135,30 @@ gpio_reset_pin(RELAY1_SC);
 gpio_set_direction(RELAY1_SC, GPIO_MODE_OUTPUT);
 ```
 
+This Syntax can be found e.g. here: [blink_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/get-started/blink/main/blink_example_main.c#L82)
 
+
+instead use this Syntax: 
+
+
+```C
+//zero-initialize the config structure.
+gpio_config_t io_conf = {};
+//disable interrupt
+io_conf.intr_type = GPIO_INTR_DISABLE;
+//set as output mode
+io_conf.mode = GPIO_MODE_OUTPUT;
+//bit mask of the pins that you want to set,e.g.GPIO18/19
+io_conf.pin_bit_mask = GPIO_OUTPUT_PIN_SEL;
+//disable pull-down mode
+io_conf.pull_down_en = 0;
+//disable pull-up mode
+io_conf.pull_up_en = 0;
+//configure GPIO with the given settings
+gpio_config(&io_conf);
+```
+
+[gpio_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/peripherals/gpio/generic_gpio/main/gpio_example_main.c#L93)
 
 
 # Source Material
