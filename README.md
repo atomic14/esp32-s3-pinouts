@@ -125,6 +125,19 @@ GPIO19, GPIO20:
 
 See Table-2-2 [here](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 
+# More about Power Up Glitches
+
+if you see Power Up Glitches on some Pins when runnning "your" Software, 
+but not when running a simple Hello World, then this might be a common Mistake: 
+
+```C
+gpio_reset_pin(RELAY1_SC);
+gpio_set_direction(RELAY1_SC, GPIO_MODE_OUTPUT);
+```
+
+
+
+
 # Source Material
 
 - [ESP32-S3-WROOM Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
