@@ -149,7 +149,7 @@ io_conf.intr_type = GPIO_INTR_DISABLE;
 //set as output mode
 io_conf.mode = GPIO_MODE_OUTPUT;
 //bit mask of the pins that you want to set,e.g.GPIO18/19
-io_conf.pin_bit_mask = GPIO_OUTPUT_PIN_SEL;
+io_conf.pin_bit_mask = (1ULL << RELAY1_SC);
 //disable pull-down mode
 io_conf.pull_down_en = 0;
 //disable pull-up mode
@@ -158,7 +158,7 @@ io_conf.pull_up_en = 0;
 gpio_config(&io_conf);
 ```
 
-[gpio_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/peripherals/gpio/generic_gpio/main/gpio_example_main.c#L93)
+This Syntax can be found e.g. here: [gpio_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/peripherals/gpio/generic_gpio/main/gpio_example_main.c#L93)
 
 
 # Source Material
