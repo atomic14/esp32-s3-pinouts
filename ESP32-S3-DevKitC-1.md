@@ -57,6 +57,6 @@ Testing:
 | U0RXD    | 36         |                  |                 | I/O/T | **U0RXD**, GPIO44, CLK_OUT2                                                                        |
 | GPIO45   | 26         |                  |                 | I/O/T | **GPIO45**                                                                                         |
 | GPIO46   | 16         |                  |                 | I/O/T | **GPIO46**                                                                                         |
-| GPIO47   | 24         |                  |                 | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
-| GPIO48   | 25         |                  |                 | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
+| GPIO47   | 24         | J3-17            | 0.0V            | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
+| GPIO48   | 25         | J3-16            | 0.0V            | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
 
