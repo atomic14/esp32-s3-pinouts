@@ -16,7 +16,7 @@ Testing:
 - I - input
 - O - output
 - T - tristate (high impedance)
-                                                             
+
 | Pin Name | Pin Number | Pin Number Devk  | Default Voltage |  Type |                                             Description                                            |
 |:--------:|:----------:|-----------------:|-----------------|:-----:|:--------------------------------------------------------------------------------------------------:|
 | GND      | 1,40       |                  |                 | P     | **GND**                                                                                            |
@@ -44,7 +44,7 @@ Testing:
 | GPIO18   | 11         |                  |                 | I/O/T | RTC_GPIO18, **GPIO18**, U1RXD, ADC2_CH7, CLK_OUT3                                                  |
 | USB_D-   | 13         | J3-20            | 0.0V            | I/O/T | RTC_GPIO19, GPIO19, U1RTS, ADC2_CH8, CLK_OUT2, **USB_D-**                                          |
 | USB_D+   | 14         | J3-19            | 3.3V            | I/O/T | RTC_GPIO20, GPIO20, U1CTS, ADC2_CH9, CLK_OUT1, **USB_D+**                                          |
-| GPIO21   | 23         |                  |                 | I/O/T | RTC_GPIO21, **GPIO21**                                                                             |
+| GPIO21   | 23         | J3-18            | 0.0V            | I/O/T | RTC_GPIO21, **GPIO21**                                                                             |
 | GPIO35   | 28         |                  |                 | I/O/T | SPIIO6, **GPIO35**, FSPID, SUBSPID                                                                 |
 | GPIO36   | 29         |                  |                 | I/O/T | SPIIO7, **GPIO36**, FSPICLK, SUBSPICLK                                                             |
 | GPIO37   | 30         |                  |                 | I/O/T | SPIDQS, **GPIO37**, FSPIQ, SUBSPIQ                                                                 |
