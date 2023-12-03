@@ -168,7 +168,7 @@ Examples are GPIO20 (D+) or GPIO48.
 
 you can switch them off in a very early stage in Bootloader: 
 
-(see here)[https://github.com/espressif/esp-idf/tree/master/examples/custom_bootloader/bootloader_hooks]
+[see here](https://github.com/espressif/esp-idf/tree/master/examples/custom_bootloader/bootloader_hooks)
 
 with e.g. the Following Code: 
 ```C
