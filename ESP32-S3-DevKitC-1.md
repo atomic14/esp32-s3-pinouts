@@ -25,7 +25,7 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | EPAD     | 41         |                  |                 | P     | **GND**                                                                                            |
 | 3V3      | 2          |                  |                 | P     | **Power supply**                                                                                   |
 | EN       | 3          |                  |                 | I     | High: on, enables the chip. Low: off, the chip powers off. Note: Do not leave the EN pin floating. |
-| GPIO0    | 27         |                  |                 | I/O/T | RTC_GPIO0, **GPIO0**                                                                               |
+| GPIO0    | 27         | J3-14            | 3.3V            | I/O/T | RTC_GPIO0, **GPIO0**                                                                               |
 | GPIO1    | 39         | J3-4             | 0.0V            | I/O/T | RTC_GPIO1, **GPIO1**, TOUCH1, ADC1_CH0                                                             |
 | GPIO2    | 38         | J3-5             | 0.0V            | I/O/T | RTC_GPIO2, **GPIO2**, TOUCH2, ADC1_CH1                                                             |
 | GPIO3    | 15         |                  |                 | I/O/T | RTC_GPIO3, **GPIO3**, TOUCH3, ADC1_CH2                                                             |
