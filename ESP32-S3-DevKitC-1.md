@@ -32,7 +32,7 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | GPIO4    | 4          | J1-4             | 0.0V            | I/O/T | RTC_GPIO4, **GPIO4**, TOUCH4, ADC1_CH3                                                             |
 | GPIO5    | 5          | J1-5             | 0.0V            | I/O/T | RTC_GPIO5, **GPIO5**, TOUCH5, ADC1_CH4                                                             |
 | GPIO6    | 6          | J1-6             | 0.0V            | I/O/T | RTC_GPIO6, **GPIO6**, TOUCH6, ADC1_CH5                                                             |
-| GPIO7    | 7          |                  |                 | I/O/T | RTC_GPIO7, **GPIO7**, TOUCH7, ADC1_CH6                                                             |
+| GPIO7    | 7          | J1-7             | 0.0V            | I/O/T | RTC_GPIO7, **GPIO7**, TOUCH7, ADC1_CH6                                                             |
 | GPIO8    | 12         |                  |                 | I/O/T | RTC_GPIO8, **GPIO8**, TOUCH8, ADC1_CH7, SUBSPICS1                                                  |
 | GPIO9    | 17         |                  |                 | I/O/T | RTC_GPIO9, **GPIO9**, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD                                           |
 | GPIO10   | 18         |                  |                 | I/O/T | RTC_GPIO10, **GPIO10**, TOUCH10, ADC1_CH9, FSPICS0, FSPIIO4, SUBSPICS0                             |
@@ -40,10 +40,10 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | GPIO12   | 20         |                  |                 | I/O/T | RTC_GPIO12, **GPIO12**, TOUCH12, ADC2_CH1, FSPICLK, FSPIIO6, SUBSPICLK                             |
 | GPIO13   | 21         |                  |                 | I/O/T | RTC_GPIO13, **GPIO13**, TOUCH13, ADC2_CH2, FSPIQ, FSPIIO7, SUBSPIQ                                 |
 | GPIO14   | 22         |                  |                 | I/O/T | RTC_GPIO14, **GPIO14**, TOUCH14, ADC2_CH3, FSPIWP, FSPIDQS, SUBSPIWP                               |
-| GPIO15   | 8          |                  |                 | I/O/T | RTC_GPIO15, **GPIO15**, U0RTS, ADC2_CH4, XTAL_32K_P                                                |
-| GPIO16   | 9          |                  |                 | I/O/T | RTC_GPIO16, **GPIO16**, U0CTS, ADC2_CH5, XTAL_32K_N                                                |
-| GPIO17   | 10         |                  |                 | I/O/T | RTC_GPIO17, **GPIO17**, U1TXD, ADC2_CH6                                                            |
-| GPIO18   | 11         |                  |                 | I/O/T | RTC_GPIO18, **GPIO18**, U1RXD, ADC2_CH7, CLK_OUT3                                                  |
+| GPIO15   | 8          | J1-8             | 0.0V            | I/O/T | RTC_GPIO15, **GPIO15**, U0RTS, ADC2_CH4, XTAL_32K_P                                                |
+| GPIO16   | 9          | J1-9             | 0.0V            | I/O/T | RTC_GPIO16, **GPIO16**, U0CTS, ADC2_CH5, XTAL_32K_N                                                |
+| GPIO17   | 10         | J1-10            | 0.0V            | I/O/T | RTC_GPIO17, **GPIO17**, U1TXD, ADC2_CH6                                                            |
+| GPIO18   | 11         | J1-11            | 0.0V            | I/O/T | RTC_GPIO18, **GPIO18**, U1RXD, ADC2_CH7, CLK_OUT3                                                  |
 | USB_D-   | 13         | J3-20            | 0.0V            | I/O/T | RTC_GPIO19, GPIO19, U1RTS, ADC2_CH8, CLK_OUT2, **USB_D-**                                          |
 | USB_D+   | 14         | J3-19            | 3.3V            | I/O/T | RTC_GPIO20, GPIO20, U1CTS, ADC2_CH9, CLK_OUT1, **USB_D+**                                          |
 | GPIO21   | 23         | J3-18            | 0.0V            | I/O/T | RTC_GPIO21, **GPIO21**                                                                             |
