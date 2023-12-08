@@ -55,8 +55,8 @@ Testing:
 | MTMS     | 35         |                  |                 | I/O/T | **MTMS**, GPIO42                                                                                   |
 | U0TXD    | 37         |                  |                 | I/O/T | **U0TXD**, GPIO43, CLK_OUT1                                                                        |
 | U0RXD    | 36         |                  |                 | I/O/T | **U0RXD**, GPIO44, CLK_OUT2                                                                        |
-| GPIO45   | 26         |                  |                 | I/O/T | **GPIO45**                                                                                         |
-| GPIO46   | 16         |                  |                 | I/O/T | **GPIO46**                                                                                         |
+| GPIO45   | 26         | J3-15            | 0.0V            | I/O/T | **GPIO45**                                                                                         |
+| GPIO46   | 16         | J1-14            | 0.0V            | I/O/T | **GPIO46**                                                                                         |
 | GPIO47   | 24         | J3-17            | 0.0V            | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
 | GPIO48   | 25         | J3-16            | 0.0V            | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
 
