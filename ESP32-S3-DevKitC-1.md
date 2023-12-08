@@ -11,6 +11,8 @@ Testing:
 [ESP32-S3-DevKitC-1 v1.1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html)
 
 
+Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/esp32-s3-pinouts-tester) 
+
 # Full GPIO Table
 
 - I - input
@@ -25,7 +27,7 @@ Testing:
 | EN       | 3          |                  |                 | I     | High: on, enables the chip. Low: off, the chip powers off. Note: Do not leave the EN pin floating. |
 | GPIO0    | 27         |                  |                 | I/O/T | RTC_GPIO0, **GPIO0**                                                                               |
 | GPIO1    | 39         | J3-4             | 0.0V            | I/O/T | RTC_GPIO1, **GPIO1**, TOUCH1, ADC1_CH0                                                             |
-| GPIO2    | 38         |                  |                 | I/O/T | RTC_GPIO2, **GPIO2**, TOUCH2, ADC1_CH1                                                             |
+| GPIO2    | 38         | J3-5             | 0.0V            | I/O/T | RTC_GPIO2, **GPIO2**, TOUCH2, ADC1_CH1                                                             |
 | GPIO3    | 15         |                  |                 | I/O/T | RTC_GPIO3, **GPIO3**, TOUCH3, ADC1_CH2                                                             |
 | GPIO4    | 4          |                  |                 | I/O/T | RTC_GPIO4, **GPIO4**, TOUCH4, ADC1_CH3                                                             |
 | GPIO5    | 5          |                  |                 | I/O/T | RTC_GPIO5, **GPIO5**, TOUCH5, ADC1_CH4                                                             |
@@ -48,13 +50,13 @@ Testing:
 | GPIO35   | 28         |                  |                 | I/O/T | SPIIO6, **GPIO35**, FSPID, SUBSPID                                                                 |
 | GPIO36   | 29         |                  |                 | I/O/T | SPIIO7, **GPIO36**, FSPICLK, SUBSPICLK                                                             |
 | GPIO37   | 30         |                  |                 | I/O/T | SPIDQS, **GPIO37**, FSPIQ, SUBSPIQ                                                                 |
-| GPIO38   | 31         |                  |                 | I/O/T | **GPIO38**, FSPIWP, SUBSPIWP                                                                       |
-| MTCK     | 32         |                  |                 | I/O/T | **MTCK**, GPIO39, CLK_OUT3, SUBSPICS1                                                              |
-| MTDO     | 33         |                  |                 | I/O/T | **MTDO**, GPIO40, CLK_OUT2                                                                         |
-| MTDI     | 34         |                  |                 | I/O/T | **MTDI**, GPIO41, CLK_OUT1                                                                         |
-| MTMS     | 35         |                  |                 | I/O/T | **MTMS**, GPIO42                                                                                   |
-| U0TXD    | 37         |                  |                 | I/O/T | **U0TXD**, GPIO43, CLK_OUT1                                                                        |
-| U0RXD    | 36         |                  |                 | I/O/T | **U0RXD**, GPIO44, CLK_OUT2                                                                        |
+| GPIO38   | 31         | J3-10            | 0.0V            | I/O/T | **GPIO38**, FSPIWP, SUBSPIWP                                                                       |
+| MTCK     | 32         | J3-9             | 3.3V            | I/O/T | **MTCK**, GPIO39, CLK_OUT3, SUBSPICS1                                                              |
+| MTDO     | 33         | J3-8             | 0.0V            | I/O/T | **MTDO**, GPIO40, CLK_OUT2                                                                         |
+| MTDI     | 34         | J3-7             | 0.0V            | I/O/T | **MTDI**, GPIO41, CLK_OUT1                                                                         |
+| MTMS     | 35         | J3-6             | 0.0V            | I/O/T | **MTMS**, GPIO42                                                                                   |
+| U0TXD    | 37         | J3-2             | 3.3V            | I/O/T | **U0TXD**, GPIO43, CLK_OUT1                                                                        |
+| U0RXD    | 36         | J3-3             | 3.3V            | I/O/T | **U0RXD**, GPIO44, CLK_OUT2                                                                        |
 | GPIO45   | 26         | J3-15            | 0.0V            | I/O/T | **GPIO45**                                                                                         |
 | GPIO46   | 16         | J1-14            | 0.0V            | I/O/T | **GPIO46**                                                                                         |
 | GPIO47   | 24         | J3-17            | 0.0V            | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
