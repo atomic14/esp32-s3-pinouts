@@ -29,7 +29,7 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | GPIO1    | 39         | J3-4             | 0.0V            | I/O/T | RTC_GPIO1, **GPIO1**, TOUCH1, ADC1_CH0                                                             |
 | GPIO2    | 38         | J3-5             | 0.0V            | I/O/T | RTC_GPIO2, **GPIO2**, TOUCH2, ADC1_CH1                                                             |
 | GPIO3    | 15         |                  |                 | I/O/T | RTC_GPIO3, **GPIO3**, TOUCH3, ADC1_CH2                                                             |
-| GPIO4    | 4          |                  |                 | I/O/T | RTC_GPIO4, **GPIO4**, TOUCH4, ADC1_CH3                                                             |
+| GPIO4    | 4          | J1-4             | 0.0V            | I/O/T | RTC_GPIO4, **GPIO4**, TOUCH4, ADC1_CH3                                                             |
 | GPIO5    | 5          |                  |                 | I/O/T | RTC_GPIO5, **GPIO5**, TOUCH5, ADC1_CH4                                                             |
 | GPIO6    | 6          |                  |                 | I/O/T | RTC_GPIO6, **GPIO6**, TOUCH6, ADC1_CH5                                                             |
 | GPIO7    | 7          |                  |                 | I/O/T | RTC_GPIO7, **GPIO7**, TOUCH7, ADC1_CH6                                                             |
