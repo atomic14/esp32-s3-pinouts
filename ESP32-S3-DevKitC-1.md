@@ -62,3 +62,8 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | GPIO47   | 24         | J3-17            | 0.0V *3.3V      | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
 | GPIO48   | 25         | J3-16            | 0.0V            | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
 
+
+
+GPIO47 was seen 3.3V on some Modules. 
+
+
