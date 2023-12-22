@@ -33,9 +33,9 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | GPIO5    | 5          | J1-7             | 0.0V            | I/O/T | RTC_GPIO5, **GPIO5**, TOUCH5, ADC1_CH4                                                             |
 | GPIO6    | 6          | J1-8             | 0.0V            | I/O/T | RTC_GPIO6, **GPIO6**, TOUCH6, ADC1_CH5                                                             |
 | GPIO7    | 7          | J1-9             | 0.0V            | I/O/T | RTC_GPIO7, **GPIO7**, TOUCH7, ADC1_CH6                                                             |
-| GPIO8    | 12         | J1-12            | 0.0V            | I/O/T | RTC_GPIO8, **GPIO8**, TOUCH8, ADC1_CH7, SUBSPICS1                                                  |
-| GPIO9    | 17         | J1-15            | 0.0V            | I/O/T | RTC_GPIO9, **GPIO9**, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD                                           |
-| GPIO10   | 18         | J1-16            | 0.0V            | I/O/T | RTC_GPIO10, **GPIO10**, TOUCH10, ADC1_CH9, FSPICS0, FSPIIO4, SUBSPICS0                             |
+| GPIO8    | 12         | J1-10            | 0.0V            | I/O/T | RTC_GPIO8, **GPIO8**, TOUCH8, ADC1_CH7, SUBSPICS1                                                  |
+| GPIO9    | 17         | J1-11            | 0.0V            | I/O/T | RTC_GPIO9, **GPIO9**, TOUCH9, ADC1_CH8, FSPIHD, SUBSPIHD                                           |
+| GPIO10   | 18         | J1-12            | 0.0V            | I/O/T | RTC_GPIO10, **GPIO10**, TOUCH10, ADC1_CH9, FSPICS0, FSPIIO4, SUBSPICS0                             |
 | GPIO11   | 19         | J1-13            | 0.0V            | I/O/T | RTC_GPIO11, **GPIO11**, TOUCH11, ADC2_CH0, FSPID, FSPIIO5, SUBSPID                                 |
 | GPIO12   | 20         | J1-14            | 0.0V            | I/O/T | RTC_GPIO12, **GPIO12**, TOUCH12, ADC2_CH1, FSPICLK, FSPIIO6, SUBSPICLK                             |
 | GPIO13   | 21         | J1-15            | 0.0V            | I/O/T | RTC_GPIO13, **GPIO13**, TOUCH13, ADC2_CH2, FSPIQ, FSPIIO7, SUBSPIQ                                 |
@@ -47,20 +47,20 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | USB_D-   | 13         | J3-20            | 0.0V            | I/O/T | RTC_GPIO19, GPIO19, U1RTS, ADC2_CH8, CLK_OUT2, **USB_D-**                                          |
 | USB_D+   | 14         | J3-19            | 3.3V            | I/O/T | RTC_GPIO20, GPIO20, U1CTS, ADC2_CH9, CLK_OUT1, **USB_D+**                                          |
 | GPIO21   | 23         | J3-18            | 0.0V            | I/O/T | RTC_GPIO21, **GPIO21**                                                                             |
-| GPIO35   | 28         | J3-13            | 0.0V            | I/O/T | SPIIO6, **GPIO35**, FSPID, SUBSPID                                                                 |
-| GPIO36   | 29         | J3-12            | 0.0V            | I/O/T | SPIIO7, **GPIO36**, FSPICLK, SUBSPICLK                                                             |
-| GPIO37   | 30         | J3-11            | 0.0V            | I/O/T | SPIDQS, **GPIO37**, FSPIQ, SUBSPIQ                                                                 |
-| GPIO38   | 31         | J3-10            | 0.0V            | I/O/T | **GPIO38**, FSPIWP, SUBSPIWP                                                                       |
-| MTCK     | 32         | J3-9             | 3.3V            | I/O/T | **MTCK**, GPIO39, CLK_OUT3, SUBSPICS1                                                              |
-| MTDO     | 33         | J3-8             | 0.0V            | I/O/T | **MTDO**, GPIO40, CLK_OUT2                                                                         |
-| MTDI     | 34         | J3-7             | 0.0V            | I/O/T | **MTDI**, GPIO41, CLK_OUT1                                                                         |
-| MTMS     | 35         | J3-6             | 0.0V            | I/O/T | **MTMS**, GPIO42                                                                                   |
-| U0TXD    | 37         | J3-2             | 3.3V            | I/O/T | **U0TXD**, GPIO43, CLK_OUT1                                                                        |
-| U0RXD    | 36         | J3-3             | 3.3V            | I/O/T | **U0RXD**, GPIO44, CLK_OUT2                                                                        |
-| GPIO45   | 26         | J3-15            | 0.0V            | I/O/T | **GPIO45**                                                                                         |
-| GPIO46   | 16         | J1-14            | 0.0V            | I/O/T | **GPIO46**                                                                                         |
-| GPIO47   | 24         | J3-17            | 0.0V *3.3V      | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
-| GPIO48   | 25         | J3-16            | 0.0V            | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
+| GPIO35   | 28         | J3-14            | 0.0V            | I/O/T | SPIIO6, **GPIO35**, FSPID, SUBSPID                                                                 |
+| GPIO36   | 29         | J3-13            | 0.0V            | I/O/T | SPIIO7, **GPIO36**, FSPICLK, SUBSPICLK                                                             |
+| GPIO37   | 30         | J3-12            | 0.0V            | I/O/T | SPIDQS, **GPIO37**, FSPIQ, SUBSPIQ                                                                 |
+| GPIO38   | 31         | J3-11            | 0.0V            | I/O/T | **GPIO38**, FSPIWP, SUBSPIWP                                                                       |
+| MTCK     | 32         | J3-10            | 3.3V            | I/O/T | **MTCK**, GPIO39, CLK_OUT3, SUBSPICS1                                                              |
+| MTDO     | 33         | J3-9             | 0.0V            | I/O/T | **MTDO**, GPIO40, CLK_OUT2                                                                         |
+| MTDI     | 34         | J3-8             | 0.0V            | I/O/T | **MTDI**, GPIO41, CLK_OUT1                                                                         |
+| MTMS     | 35         | J3-7             | 0.0V            | I/O/T | **MTMS**, GPIO42                                                                                   |
+| U0TXD    | 37         | J3-6             | 3.3V            | I/O/T | **U0TXD**, GPIO43, CLK_OUT1                                                                        |
+| U0RXD    | 36         | J3-5             | 3.3V            | I/O/T | **U0RXD**, GPIO44, CLK_OUT2                                                                        |
+| GPIO45   | 26         | J3-4             | 0.0V            | I/O/T | **GPIO45**                                                                                         |
+| GPIO46   | 16         | J3-3             | 0.0V            | I/O/T | **GPIO46**                                                                                         |
+| GPIO47   | 24         | J3-22            | 0.0V *3.3V      | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
+| GPIO48   | 25         | J3-21            | 0.0V            | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
 
 
 
