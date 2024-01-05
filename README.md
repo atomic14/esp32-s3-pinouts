@@ -192,3 +192,4 @@ If you want to learn more about what's needed to run an ESP32-S3, then there's a
 | GPIO46   | 16         | I/O/T | **GPIO46**                                                                                         |
 | GPIO47   | 24         | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
 | GPIO48   | 25         | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
+
