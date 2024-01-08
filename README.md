@@ -131,18 +131,9 @@ See Table-2-2 [here](https://www.espressif.com/sites/default/files/documentation
 - [ESP32-S3 Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 - [ESP32-S3 Technical Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)
 
+# Excel Version With Multiple Modules
 
-# Video Version
-
-For people who prefer video content - you can wartch a video version [here](https://youtu.be/tC-DLeI6hjQ):
-
-[![ESP32-S3 Pinouts](https://img.youtube.com/vi/tC-DLeI6hjQ/0.jpg)](https://www.youtube.com/watch?v=tC-DLeI6hjQ)
-
-# ESP32-S3 Schematics
-
-If you want to learn more about what's needed to run an ESP32-S3, then there's a great playlist here - it takes you from a ridiculously minimal circuit to a fully functional board with a display and audio.
-
-[![Tiny ESP32-S3 Board](https://img.youtube.com/vi/zeSlRvCd6tg/0.jpg)](https://www.youtube.com/playlist?list=PL5vDt5AALlRe7A07bVV5UP6ttTWAGH4Yi)
+There's a really [handy spreadsheet here](ESP32-Pin-Allocation.xlsx) provided by Mark Nowell with lists of ESP32-S3 modules and their pinouts.
 
 # Full GPIO Table
 
@@ -193,3 +184,8 @@ If you want to learn more about what's needed to run an ESP32-S3, then there's a
 | GPIO47   | 24         | I/O/T | SPICLK_P_DIFF, **GPIO47**, SUBSPICLK_P_DIFF                                                        |
 | GPIO48   | 25         | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
 
+# Video Version
+
+For people who prefer video content - you can wartch a video version [here](https://youtu.be/tC-DLeI6hjQ):
+
+[![ESP32-S3 Pinouts](https://img.youtube.com/vi/tC-DLeI6hjQ/0.jpg)](https://www.youtube.com/watch?v=tC-DLeI6hjQ)
