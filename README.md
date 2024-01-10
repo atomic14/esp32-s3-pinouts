@@ -125,6 +125,67 @@ GPIO19, GPIO20:
 
 See Table-2-2 [here](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 
+# More about Power Up Glitches
+
+if you see Power Up Glitches on some Pins when runnning "your" Software, 
+but not when running a simple Hello World, then this might be a common Mistake: 
+
+```C
+gpio_reset_pin(RELAY1_SC);
+gpio_set_direction(RELAY1_SC, GPIO_MODE_OUTPUT);
+```
+
+This Syntax can be found e.g. here: [blink_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/get-started/blink/main/blink_example_main.c#L82)
+
+
+instead use this Syntax: 
+
+
+```C
+//zero-initialize the config structure.
+gpio_config_t io_conf = {};
+//disable interrupt
+io_conf.intr_type = GPIO_INTR_DISABLE;
+//set as output mode
+io_conf.mode = GPIO_MODE_OUTPUT;
+//bit mask of the pins that you want to set,e.g.GPIO18/19
+io_conf.pin_bit_mask = (1ULL << RELAY1_SC);
+//disable pull-down mode
+io_conf.pull_down_en = 0;
+//disable pull-up mode
+io_conf.pull_up_en = 0;
+//configure GPIO with the given settings
+gpio_config(&io_conf);
+```
+
+This Syntax can be found e.g. here: [gpio_example_main.c](https://github.com/espressif/esp-idf/blob/03414a15508036c8fc0f51642aed7a264e9527df/examples/peripherals/gpio/generic_gpio/main/gpio_example_main.c#L93)
+
+
+# Further Considerations about Power Up Glitches
+
+there are cases where the Pin is by Default connected to a +3.3V or a +1.8V Power Domain. 
+Examples are GPIO20 (D+) or GPIO48. 
+
+you can switch them off in a very early stage in Bootloader: 
+
+[see here](https://github.com/espressif/esp-idf/tree/master/examples/custom_bootloader/bootloader_hooks)
+
+with e.g. the Following Code: 
+```C
+void bootloader_before_init(void) {
+    /* Keep in my mind that a lot of functions cannot be called from here
+     * as system initialization has not been performed yet, including
+     * BSS, SPI flash, or memory protection. */
+    ESP_LOGI("HOOK", "This hook is called BEFORE bootloader initialization");
+    gpio_hal_iomux_func_sel(GPIO_PIN_MUX_REG[GPIO_NUM_20], PIN_FUNC_GPIO);
+    esp_rom_gpio_pad_select_gpio(GPIO_NUM_48);
+    gpio_ll_output_enable (&GPIO, GPIO_NUM_48);
+    gpio_ll_set_level (&GPIO, GPIO_NUM_48, 0);
+}
+```
+
+
+
 # Source Material
 
 - [ESP32-S3-WROOM Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
