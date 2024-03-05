@@ -47,6 +47,7 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | USB_D-   | 13         | J3-20            | 0.0V            | I/O/T | RTC_GPIO19, GPIO19, U1RTS, ADC2_CH8, CLK_OUT2, **USB_D-**                                          |
 | USB_D+   | 14         | J3-19            | 3.3V            | I/O/T | RTC_GPIO20, GPIO20, U1CTS, ADC2_CH9, CLK_OUT1, **USB_D+**                                          |
 | GPIO21   | 23         | J3-18            | 0.0V            | I/O/T | RTC_GPIO21, **GPIO21**                                                                             |
+| SPICS1   | 28         | J3-17            |                 | I/O/T | SPICS1, **GPIO26**                                                                                 |
 | GPIO35   | 28         | J3-14            | 0.0V            | I/O/T | SPIIO6, **GPIO35**, FSPID, SUBSPID                                                                 |
 | GPIO36   | 29         | J3-13            | 0.0V            | I/O/T | SPIIO7, **GPIO36**, FSPICLK, SUBSPICLK                                                             |
 | GPIO37   | 30         | J3-12            | 0.0V            | I/O/T | SPIDQS, **GPIO37**, FSPIQ, SUBSPIQ                                                                 |
