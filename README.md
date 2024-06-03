@@ -186,6 +186,6 @@ There's a really [handy spreadsheet here](ESP32-Pin-Allocation.xlsx) provided by
 
 # Video Version
 
-For people who prefer video content - you can wartch a video version [here](https://youtu.be/tC-DLeI6hjQ):
+For people who prefer video content - you can watch a video version [here](https://youtu.be/tC-DLeI6hjQ):
 
 [![ESP32-S3 Pinouts](https://img.youtube.com/vi/tC-DLeI6hjQ/0.jpg)](https://www.youtube.com/watch?v=tC-DLeI6hjQ)
