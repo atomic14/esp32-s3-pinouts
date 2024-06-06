@@ -29,7 +29,7 @@ Avoid these unless you have no choice.
 | Pin Name | Details                                                    |
 |----------|------------------------------------------------------------|
 | GPIO0    | Hold this low during boot to enter firmware download mode. |
-| GPIO3    | In combination with eFuses controls the default behaviour of the JTAG pins. Probably ok to use unless you are messing with eFuses |
+| GPIO3    | In combination with eFuses controls the default behaviour of the JTAG pins. Safe to use unless you are messing with eFuses |
 | GPIO45   | VDD_SPI - best leave this disconnected |
 | GPIO46   | ROM messages printing - best to leave this disconnected as well. Causes issues with firmware download (see Boot Mode Control table below) |
 
@@ -76,9 +76,9 @@ For modules that include Octal PSRAM (any module that has 8MB PSRAM) you **MUST 
 
 GPIO39, GPIO40, GPIO41, GPIO42
 
-The default behaviour of these pins is JTAG debugging, during firmware download mode they will have spurious values on them.
+The behaviour of these pins is determined by eFuses in conjunction with GPIO3.  By default, if you haven't burnt any eFuses yet, these pins are safe to use.  JTAG will be available over USB.
 
-This can be turned off by burning some eFuses in conjunction with GPIO3 (see the datasheet for details).
+If you wish to use these pins for JTAG, you must burn some eFuses, and control GPIO3 at start up.  See the datasheet section 2.6.4 for full details.
 
 # UART Pins
 
