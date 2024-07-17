@@ -76,15 +76,28 @@ For modules that include Octal PSRAM (any module that has 8MB PSRAM) you **MUST 
 
 GPIO39, GPIO40, GPIO41, GPIO42
 
-The behaviour of these pins is determined by eFuses in conjunction with GPIO3.  By default, if you haven't burnt any eFuses yet, these pins are safe to use.  JTAG will be available over USB.
+The behaviour of these pins is determined by eFuses in conjunction with GPIO3.  By default, if you haven't burnt any eFuses yet, these pins are safe to use*.  JTAG will be available over USB.
 
 If you wish to use these pins for JTAG, you must burn some eFuses, and control GPIO3 at start up.  See the datasheet section 2.6.4 for full details.
+
+*Some of the JTAG pins start pulled-up at boot:
+
+| JTAG Pin | Download boot | SPI boot (default) |
+|---------------|-----------------------|-----------|
+GPIO39 | Pull-up | Pull-up*
+GPIO40 | Pull-up | Floating
+GPIO41 | Floating | Floating
+GPIO42 | Floating | Floating
+
+GPIO39 starts pulled-up at boot. This can be fixed by burning EFUSE_DIS_PAD_JTAG (a.k.a. HARD_DIS_JTAG) to **permanently** disable the JTAG pins. JTAG will still be available over the USB port.
+
+GPIO39 & GPIO40 are also pulled-up when in the 'download boot mode - regardless of eFuse state.
 
 # UART Pins
 
 GPIO43, GPIO44
 
-These default to UART0 until they are used by your code.
+These default to UART0 until they are used by your code. They both start with pull-up resistors enabled.
 
 # ADC Pins
 
