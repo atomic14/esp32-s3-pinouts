@@ -63,7 +63,10 @@ Testing with a ["Hello World" Example](https://github.com/diplfranzhoepfinger/es
 | GPIO48   | 25         | J3-16            | 0.0V            | I/O/T | SPICLK_N_DIFF, **GPIO48**, SUBSPICLK_N_DIFF                                                        |
 
 
+## Additional notes
 
-GPIO47 was seen 3.3V on some Modules. 
-
+- GPIO47 was seen 3.3V on some modules.
+- Some modules seem to have Wi-Fi issues when GPIO21 is used (see [here](https://esp32.com/viewtopic.php?t=41899) and [here](https://esp32.com/viewtopic.php?t=41895)). Potential fixes:
+  - Try to lower TX power to 11-13 dBm
+  - Disconnect any peripherals attached to i
 
