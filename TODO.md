@@ -11,13 +11,14 @@ Legend:
 
 ## 🖼️ Image changes — FLAGGED FOR ASSESSMENT
 
-These can't be done from text alone; they need the Affinity Designer source edited.
+These can't be done from text alone; they need the Affinity Designer source (`esp32.afdesign`) edited and re-exported to `esp32.webp` + `esp32.pdf`. Chris is making these manually.
 
-- [ ] **#28 — GPIO14 mislabeled `ADC1_CH3`, should be `ADC2_CH3`.** ✅ **Confirmed bug.** The diagram labels GPIO14 as `ADC1_CH3`, which both collides with GPIO4 (the real ADC1_CH3) and contradicts the datasheet. README table is already correct. **High priority — this is a factual error in the artwork.**
-- [ ] **#36 / #14 / #33 — Diagram titled "ESP32-S3-WROOM-2".** Most users have WROOM-1/1U; pinout is identical across 1/1U/2. Consider retitling to "WROOM-1/1U/2" or adding a note on the image. (Text note added to README; image still says WROOM-2.)
-- [ ] **#35 — GPIO45/46 shown as red "Do Not Use".** Reporter argues they're usable with caution (inputs/outputs after boot, mind pull-down + VDD_SPI/ROM-msg roles). Decision call: keep "Do Not Use" or downgrade to "Have default behaviours / caution".
-- [ ] **#13 / #18 / #34 — GPIO47/48 are 1.8V on "V" modules (R8V/R16V/R16).** Diagram shows them green "No issues". Consider a 1.8V caution marker/note for VDD_SPI=1.8V modules. (Text note added to README.)
-- [ ] **#22 / #26 — GPIO33/34 not on the diagram at all.** They exist on the WROOM-2 module, are reserved for Octal PSRAM/flash, and can crash if probed. Consider adding them (with Octal-PSRAM caution styling).
+- [ ] **#28 — GPIO14 mislabeled `ADC1_CH3`, should be `ADC2_CH3`.** ✅ **Confirmed bug.** The diagram labels GPIO14 as `ADC1_CH3`, which both collides with GPIO4 (the real ADC1_CH3) and contradicts the datasheet. README table is already correct. **High priority — this is a factual error in the artwork.** (Issue still open.)
+- [ ] **#36 / #14 / #33 — Diagram titled "ESP32-S3-WROOM-2".** Most users have WROOM-1/1U; pinout is identical across 1/1U/2. Consider retitling to "WROOM-1/1U/2" or adding a note on the image. (Text note added to README; image still says WROOM-2.) (#36/#33 open; #14 open tracking this + schematic.)
+- [ ] **#35 — GPIO45/46 shown as red "Do Not Use".** Reporter argues they're usable with caution (inputs/outputs after boot, mind pull-down + VDD_SPI/ROM-msg roles). Decision call: keep "Do Not Use" or downgrade to "Have default behaviours / caution". (Issue open.)
+- [ ] **#22 / #26 — GPIO33/34 not on the diagram at all.** They exist on the WROOM-2 module, are reserved for Octal PSRAM/flash, and can crash if probed. Consider adding them (with Octal-PSRAM caution styling). (Issues closed — doc note added; diagram addition optional/nice-to-have.)
+
+_Resolved as text-only (no diagram change):_ **#13 / #18 / #34** GPIO47/48 1.8V — closed with a dedicated README note rather than an image marker.
 
 ---
 
