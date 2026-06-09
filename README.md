@@ -18,6 +18,10 @@ Feel free to open an issue or PR if you have any suggestions. And if you found i
 - the atomic14 newsletter: https://atomic14.substack.com
 - Patreon: https://www.patreon.com/atomic14
 
+You can also pick up ESP32-S3 boards here — these are affiliate links, so buying through them helps support this work at no extra cost to you:
+
+- AliExpress: https://s.click.aliexpress.com/e/_c4dQtFNJ
+
 # ESP32-S3 Pinouts
 
 I've always used this [Random Nerds page](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/) as a reference for which ESP32 pins are safe to use.
