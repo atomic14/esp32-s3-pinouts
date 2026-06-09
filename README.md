@@ -1,3 +1,15 @@
+> # 📢 This project is moving to a new home
+>
+> We're winding this repo down and moving the pinout content over to a new, interactive website with searchable pin finders, per-module pages, downloadable footprints and more:
+>
+> ### 👉 **[esp32.atomic14.com](https://esp32.atomic14.com)**
+>
+> Jump straight to a module:
+> - **[ESP32-S3-WROOM-1](https://esp32.atomic14.com/modules/esp32-s3-wroom-1/)**
+> - **[ESP32-S3-WROOM-2](https://esp32.atomic14.com/modules/esp32-s3-wroom-2/)**
+>
+> The information below will remain here for reference, but new updates and corrections are happening on the website. Thanks to everyone who contributed! 🙏
+
 # Is this useful?
 
 Feel free to open an issue or PR if you have any suggestions. And if you found it helpful then you might like to visit one of these links:
