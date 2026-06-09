@@ -16,9 +16,9 @@ These can't be done from text alone; they need the Affinity Designer source (`es
 - [ ] **#28 — GPIO14 mislabeled `ADC1_CH3`, should be `ADC2_CH3`.** ✅ **Confirmed bug.** The diagram labels GPIO14 as `ADC1_CH3`, which both collides with GPIO4 (the real ADC1_CH3) and contradicts the datasheet. README table is already correct. **High priority — this is a factual error in the artwork.** (Issue still open.)
 - [ ] **#36 / #14 / #33 — Diagram titled "ESP32-S3-WROOM-2".** Most users have WROOM-1/1U; pinout is identical across 1/1U/2. Consider retitling to "WROOM-1/1U/2" or adding a note on the image. (Text note added to README; image still says WROOM-2.) (#36/#33 open; #14 open tracking this + schematic.)
 - [ ] **#35 — GPIO45/46 shown as red "Do Not Use".** Reporter argues they're usable with caution (inputs/outputs after boot, mind pull-down + VDD_SPI/ROM-msg roles). Decision call: keep "Do Not Use" or downgrade to "Have default behaviours / caution". (Issue open.)
-- [ ] **#22 / #26 — GPIO33/34 not on the diagram at all.** They exist on the WROOM-2 module, are reserved for Octal PSRAM/flash, and can crash if probed. Consider adding them (with Octal-PSRAM caution styling). (Issues closed — doc note added; diagram addition optional/nice-to-have.)
-
 _Resolved as text-only (no diagram change):_ **#13 / #18 / #34** GPIO47/48 1.8V — closed with a dedicated README note rather than an image marker.
+
+_No diagram change needed:_ **#22 / #26** GPIO33/34 — these are **not broken out on the WROOM-1/1U/2 modules** (no module pin), so the diagram correctly omits them. The README note explains they must be avoided in software because they map to internal Octal PSRAM/flash lines. (Issues closed.)
 
 ---
 

@@ -87,7 +87,9 @@ A quick way to tell: if the chip/module name contains **R8** or higher (`R8`, `R
 
 ## GPIO33 & GPIO34
 
-These are also reserved on modules that use Octal SPI PSRAM/flash - they are used internally for the Octal interface (see Espressif's [GPIO reference](https://docs.espressif.com/projects/esp-idf/en/v5.2.2/esp32s3/api-reference/peripherals/gpio.html)). On affected modules, driving or even probing them as inputs can lock up the PSRAM or crash the chip, so leave them alone unless you know your module does not use Octal PSRAM/flash.
+GPIO33 and GPIO34 exist on the bare ESP32-S3 chip but are **not broken out on the WROOM-1/1U/2 modules** - there is no physical module pin for them (which is why they don't appear on the diagram). On modules with Octal SPI PSRAM/flash they are used internally for the Octal interface (see Espressif's [GPIO reference](https://docs.espressif.com/projects/esp-idf/en/v5.2.2/esp32s3/api-reference/peripherals/gpio.html)).
+
+So you can't wire anything to them, but you should still **avoid assigning peripherals to GPIO33/34 in software** (or probing them in a pin-scan loop) on a WROOM module - doing so touches the internal Octal PSRAM/flash lines and can lock up the PSRAM or crash the chip.
 
 # GPIO47 & GPIO48 Working Voltage (1.8V on "V" modules)
 
