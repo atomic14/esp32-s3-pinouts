@@ -14,9 +14,9 @@ But I haven't seen a similar one for the ESP32-S3 - so I thought I should make o
 
 The majority of this information is taken from the [ESP32-S3-WROOM datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) with additional information from the [ESP32-S3 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf).
 
-![ESP32-S3 WROOM Pin Out](esp32.webp)
+![ESP32-S3 WROOM Pin Out](esp32-s3.webp)
 
-You can download a high resolution PDF version of this image [here](esp32.pdf).
+You can download a high resolution PDF version of this image [here](esp32-s3.pdf).
 
 The above image is a WROOM module with the pins labeled. Bold indicates the default behaviour of each pin. I've ommitted some of the more esoteric pins names, but you can find the full list in the datasheet.
 

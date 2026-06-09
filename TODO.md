@@ -4,7 +4,7 @@ Triaged 2026-06-09. Source: `gh issue list` on `atomic14/esp32-s3-pinouts`.
 
 Legend:
 - 🟢 **DOC FIX** — fixable in README/markdown text. Safe to do now.
-- 🖼️ **IMAGE** — requires editing the diagram (`esp32.afdesign` → `esp32.webp`/`esp32.pdf`). **Needs Chris to assess.**
+- 🖼️ **IMAGE** — requires editing the diagram (`esp32-s3.afdesign` → `esp32-s3.webp`/`esp32-s3.pdf`). **Needs Chris to assess.**
 - 🔵 **DISCUSS** — question, larger-scope feature, or unverified claim. Leave open / needs research.
 
 ---
