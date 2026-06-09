@@ -22,6 +22,17 @@ The above image is a WROOM module with the pins labeled. Bold indicates the defa
 
 There is a lot more flexibility with the ESP32-S3, so most pins can be used for any peripheral. However there are still some pins that have some funny behaviour.
 
+> **Which modules does this apply to?** The diagram is labelled WROOM-2, but the pinout is identical for the **ESP32-S3-WROOM-1, -1U and -2** modules - this reference applies to all of them. The differences between variants are flash/PSRAM size and type (the `N..`/`R..`/`V` suffixes), which affect a handful of pins as noted below.
+
+## Power & Boot Notes
+
+- **Power supply:** Espressif [recommend](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf) a supply capable of at least **500 mA** for the module.
+- **EN (BOOT/reset):** the EN pin is only very weakly pulled high internally (2+ MΩ), which is often not reliable on its own. Add an external pull-up (100 kΩ works well), and consider a proper reset-supervisor IC (e.g. MAX809T) rather than just an RC network, especially with large bulk capacitance on the 3.3V rail.
+
+## A note on SPI speed
+
+You can route SPI (and most peripherals) to almost any pin via the GPIO matrix, but doing so **limits the SPI clock to 80 MHz**. To run faster you must use the dedicated IO_MUX pins. See the [SPI master docs](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/peripherals/spi_master.html#gpio-matrix-and-io-mux).
+
 # <span style="color: orange;">Strapping Pins</span>
 
 Avoid these unless you have no choice.
@@ -72,6 +83,16 @@ GPIO19, GPIO20 - these are both used for the USB connection.
 
 For modules that include Octal PSRAM (any module that has 8MB PSRAM) you **MUST NOT** use GPIO35, GPIO36 or GPIO37.
 
+A quick way to tell: if the chip/module name contains **R8** or higher (`R8`, `R8V`, `R16`, ...) it has Octal PSRAM and these pins are off-limits. Espressif only use Octal SPI in WROOM modules when they need to, so modules below `R8` are fine to use GPIO35-37.
+
+## GPIO33 & GPIO34
+
+These are also reserved on modules that use Octal SPI PSRAM/flash - they are used internally for the Octal interface (see Espressif's [GPIO reference](https://docs.espressif.com/projects/esp-idf/en/v5.2.2/esp32s3/api-reference/peripherals/gpio.html)). On affected modules, driving or even probing them as inputs can lock up the PSRAM or crash the chip, so leave them alone unless you know your module does not use Octal PSRAM/flash.
+
+# GPIO47 & GPIO48 Working Voltage (1.8V on "V" modules)
+
+On modules where VDD_SPI is set to 1.8V - the "V" variants such as **N8R8V**, **N16R16V** (anything with a trailing **V** in the name) - the working voltage of **GPIO47 and GPIO48 is 1.8V**, not 3.3V. This is because VDD_SPI also supplies these two pins. Driving them from, or into, 3.3V logic can damage the part or give unreliable levels. See page 12 of the [ESP32-S3-WROOM-2 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-2_datasheet_en.pdf).
+
 # JTAG Pins
 
 GPIO39, GPIO40, GPIO41, GPIO42
@@ -99,6 +120,12 @@ GPIO43, GPIO44
 
 These default to UART0 until they are used by your code. They both start with pull-up resistors enabled.
 
+If you are uploading code and using the serial console over the **native USB** port (USB-CDC/JTAG), UART0 is free and you **can** repurpose GPIO43/44 as ordinary GPIOs (e.g. to drive a NeoPixel ring). Just be aware of the boot-time pull-ups, and that any early-boot ROM/bootloader logging still goes to UART0 unless you disable it (`ESP_CONSOLE_NONE` / route the console to USB).
+
+# Flash Mode (QIO/QOUT vs DIO/DOUT) and GPIO9/GPIO10
+
+Most ESP32-S3 modules run their SPI flash in **QIO/QOUT** (quad) mode, which uses two extra data lines on **GPIO9 (FSPIHD)** and **GPIO10 (FSPIIO4/CS)**. If the flash is configured for **DIO/DOUT** (dual) mode instead, those two pins are not needed for flash and are free for other uses. If you intend to use GPIO9/GPIO10 as general IO on a module with internal flash, make sure the flash mode is set to dual.
+
 # ADC Pins
 
 The ADC channels are all on fixed pins, and if you are using WiFi you cannot use ADC Unit 2
@@ -116,6 +143,22 @@ The pins for ADC Unit 1 are:
 | GPIO7    | ADC1_CH6 |
 | GPIO8    | ADC1_CH7 |
 | GPIO9    | ADC1_CH8 |
+| GPIO10   | ADC1_CH9 |
+
+The pins for ADC Unit 2 are (remember you **cannot use these while WiFi is active**):
+
+| GPIO Number | ADC Channel |
+|-------------|-------------|
+| GPIO11   | ADC2_CH0 |
+| GPIO12   | ADC2_CH1 |
+| GPIO13   | ADC2_CH2 |
+| GPIO14   | ADC2_CH3 |
+| GPIO15   | ADC2_CH4 |
+| GPIO16   | ADC2_CH5 |
+| GPIO17   | ADC2_CH6 |
+| GPIO18   | ADC2_CH7 |
+| GPIO19   | ADC2_CH8 |
+| GPIO20   | ADC2_CH9 |
 
 # DAC Pins
 
@@ -245,7 +288,7 @@ There's a really [handy spreadsheet here](ESP32-Pin-Allocation.xlsx) provided by
 | GPIO21   | 23         | I/O/T | RTC_GPIO21, **GPIO21**                                                                             |
 | SPICS1   |            | I/O/T | SPICS1, **GPIO26**                                                                                 |
 | GPIO33   |            | I/O/T | **GPIO33**                                                                                         |
-| GPIO34   |            | I/O/T | **GPIO33**                                                                                         |
+| GPIO34   |            | I/O/T | **GPIO34**                                                                                         |
 | GPIO35   | 28         | I/O/T | SPIIO6, **GPIO35**, FSPID, SUBSPID                                                                 |
 | GPIO36   | 29         | I/O/T | SPIIO7, **GPIO36**, FSPICLK, SUBSPICLK                                                             |
 | GPIO37   | 30         | I/O/T | SPIDQS, **GPIO37**, FSPIQ, SUBSPIQ                                                                 |
