@@ -28,7 +28,7 @@ _No diagram change needed:_ **#22 / #26** GPIO33/34 — these are **not broken o
 - [x] **#22 / #26 — GPIO33/34 reserved for Octal PSRAM/flash.** Added note to PSRAM section.
 - [x] **#13 / #18 / #34 — GPIO47/48 1.8V on "V" modules.** Added a dedicated note.
 - [x] **#23 — Can GPIO43/44 (UART0) be used as output when on USB?** Yes. Added clarification.
-- [x] **#16 — QIO vs DIO flash mode and GPIO9/10.** Added note.
+- [x] **#16 — QIO vs DIO flash mode and GPIO9/10.** ~~Added note.~~ **Note was factually wrong (see #37) — corrected.** On the S3 the flash is on the in-package SPI0/1 bus (GPIO26–32, not broken out); GPIO9/10 are FSPI (SPI2) pins and are *always* free regardless of flash mode. The QIO/DIO reclaim trick only applies to the original ESP32. Section rewritten; #37 closed.
 - [x] **#14 — Several additions:** clarified applies to WROOM-1/1U/2; 500 mA supply recommendation; weak BOOT(EN) pull-up note; GPIO-matrix 80 MHz SPI limit; "R8/R8V/V" module naming shortcut.
 
 ---

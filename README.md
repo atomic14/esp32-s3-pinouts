@@ -140,9 +140,15 @@ These default to UART0 until they are used by your code. They both start with pu
 
 If you are uploading code and using the serial console over the **native USB** port (USB-CDC/JTAG), UART0 is free and you **can** repurpose GPIO43/44 as ordinary GPIOs (e.g. to drive a NeoPixel ring). Just be aware of the boot-time pull-ups, and that any early-boot ROM/bootloader logging still goes to UART0 unless you disable it (`ESP_CONSOLE_NONE` / route the console to USB).
 
-# Flash Mode (QIO/QOUT vs DIO/DOUT) and GPIO9/GPIO10
+# GPIO9 & GPIO10 are always free (not flash pins on the S3)
 
-Most ESP32-S3 modules run their SPI flash in **QIO/QOUT** (quad) mode, which uses two extra data lines on **GPIO9 (FSPIHD)** and **GPIO10 (FSPIIO4/CS)**. If the flash is configured for **DIO/DOUT** (dual) mode instead, those two pins are not needed for flash and are free for other uses. If you intend to use GPIO9/GPIO10 as general IO on a module with internal flash, make sure the flash mode is set to dual.
+**GPIO9 and GPIO10 are general-purpose IO on the ESP32-S3-WROOM-1/1U/2 modules, regardless of the flash mode (QIO/QOUT/DIO/DOUT).** They are *not* part of the boot-flash bus.
+
+On the ESP32-S3 the in-package flash/PSRAM runs on the **SPI0/1 interface** (`SPICS0/1`, `SPICLK`, `SPID`, `SPIQ`, `SPIHD`, `SPIWP`, and the octal `SPIIO*/SPIDQS` lines), which the datasheet maps to **GPIO26–GPIO32**. On the WROOM modules those pins are in-package and not broken out, so the flash never touches any pin you can reach. Quad-vs-dual flash mode only changes how many of those internal GPIO26–32 lines are used — it has no effect on GPIO9/GPIO10.
+
+GPIO9 (`FSPIHD`) and GPIO10 (`FSPICS0`/`FSPIIO4`) belong to **FSPI (SPI2)** — the general-purpose fast-SPI peripheral you can use freely.
+
+> ⚠️ **This is different from the original ESP32.** On the classic ESP32 the SPI flash sits on GPIO6–11, and GPIO9/GPIO10 (SD_DATA2/3) can only be reclaimed if the flash is set to DIO instead of QIO. That does **not** carry over to the ESP32-S3 — its flash bus is on entirely different, in-package pins.
 
 # ADC Pins
 
