@@ -2,7 +2,7 @@
 >
 > We're winding this repo down and moving the pinout content over to a new, interactive website with searchable pin finders, per-module pages, downloadable footprints and more:
 >
-> ### 👉 **[esp32.atomic14.com](https://www.atomic14.com/esp32/)**
+> ### 👉 **[www.atomic14.com/esp32](https://www.atomic14.com/esp32/)**
 >
 > Jump straight to a module:
 > - **[ESP32-S3-WROOM-1](https://www.atomic14.com/esp32/modules/esp32-s3-wroom-1/)**
